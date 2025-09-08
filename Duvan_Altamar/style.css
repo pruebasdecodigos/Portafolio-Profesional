@@ -19,6 +19,7 @@
     --color-progreso: linear-gradient(90deg, #008cffa4, #2600ffc2);
     --header-height: 64px;
     --color-principal: #0072ff;
+    --color-borde-fondo: rgba(255, 89, 89, 0.886);
 }
 
 * {
@@ -49,8 +50,26 @@ header {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
     font-weight: bold;
     font-size: 1.3rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.logo-foto {
+    width: 50px;   
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover; /* esto recorta sin deformar */
+    border: 2px solid var(--color-borde-fondo); /*Esto es para el borde blanco*/
+    flex-shrink: 0; 
+}
+
+.logo:hover {
+    transform: scale(1.1);
 }
 
 .menu-toggle,
@@ -636,4 +655,89 @@ esto de abajo, sirve para que en las pantallas pequeñas las cards de mis seccio
         width: 100%;
         max-width: 400px; 
 }
+}
+
+/*Esta seccion va a ser para el despliegue de la informacion del 3cer proyecto*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    padding: 80px 16px 16px;
+}
+
+.modal.abierta {
+    display: block;
+}
+
+.modal-content {
+    background: #fff;
+    color: #222;
+    margin: 0 auto;
+    max-width: 520px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    border: none;
+    background: transparent;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.cerrar-modal:hover {
+    color: var(--color-accent-hover);
+}
+
+
+/*Modal del mensaje del formulario*/
+
+.modal-exito {
+  display: none;
+  position: fixed;
+  z-index: 3000; /* un poco más alto que el otro modal */
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-exito.abierta {
+  display: flex;
+}
+
+.modal-exito-content {
+  background: #fff;
+  color: #222;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.cerrar-modal-exito {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: #333;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cerrar-modal-exito:hover {
+  color: var(--color-accent-hover);
 }

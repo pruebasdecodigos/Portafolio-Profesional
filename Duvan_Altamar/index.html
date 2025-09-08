@@ -3,13 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="Duván Altamar, portafolio, desarrollador web, frontend, proyectos, HTML, CSS, JavaScript">
+  <meta name="author" content="Duván Altamar">
   <title>Portafolio Profesional</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 
 <header>
-  <div class="logo">Mi Portafolio</div>
+  <div class="logo">
+  <img src="./assets/img/foto_logoheader.png" alt="Foto de personal de Duvan Altamar" class="logo-foto">
+  <span>Mi Portafolio personal</span>
+</div>
   <div class="menu-toggle" id="menu-toggle" aria-controls="nav" aria-expanded="false"> ☰ </div>
   <nav id="nav">
     <div class="close-btn" id="close-btn" aria-label="Cerrar menú">✖</div>
@@ -124,7 +129,7 @@
     <div class="modal-content">
       <button class="cerrar-modal" aria-label="Cerrar">✖</button>
       <h2 id="modal-titulo">Vista previa proyecto secreto</h2>
-      <p>Este proyecto aún está en fase confidencial, pero pronto estará disponible para el público 🚀....</p>
+      <p>Este proyecto aún está en fase confidencial, pero pronto estará disponible para el público 🚀</p>
     </div>
   </div>
 
@@ -166,12 +171,20 @@
       <p>© 2025 Portafolio Personal. Todos los derechos reservados.</p>
     </div>
     <div class="footer-right">
-      <a href="https://tocaunavida.org/" target="_blank" rel="noopener noreferrer"><img src="./assets/img/Logo_fRofe.png" alt="Logo de la Fundación Rofe" class="logo-redondeado"></a>
-      <a href="https://site2.q10.com/" target="_blank" rel="noopener noreferrer"><img src="./assets/img/Logo_Q10.png" alt="Logo perteneciente a Q10" ></a>
+      <a href="https://tocaunavida.org/" target="_blank" rel="noopener noreferrer"><img src="./assets/img/Logo_fRofe.png" alt="Logo de la Fundación Rofe, empresa aliada de Jovenes creativos" class="logo-redondeado"></a>
+      <a href="https://site2.q10.com/" target="_blank" rel="noopener noreferrer"><img src="./assets/img/Logo_Q10.png" alt="Logo perteneciente a Q10, plataforma donde se motan los modulos de Jovenes Creativos" ></a>
       <a href="https://jovenes.tocaunavida.org/" target="_blank" rel="noopener noreferrer"><img src="./assets/img/Logo-JC.png" alt="Logo de Jóvenes Toca Una Vida o Jovenes Creativos"></a>
     </div>
   </div>
 </footer>
+
+<div id="modal-exito" class="modal-exito" aria-hidden="true">
+  <div class="modal-exito-content">
+    <button id="cerrar-modal-exito" class="cerrar-modal-exito">&times;</button>
+    <h2>✅ Mensaje enviado</h2>
+    <p>Gracias por contactarme, te responderé pronto.</p>
+  </div>
+</div>
 
 <script src="./script.js"></script>
 </body>

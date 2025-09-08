@@ -135,3 +135,62 @@ form.addEventListener("submit", (e) => {
     else if (errorMensaje.textContent) mensaje.focus();
   }
 });
+
+const modalLinks = document.querySelectorAll("[data-modal]");
+const modal = document.getElementById("modal-proyecto");
+const btnCerrarModal = modal ? modal.querySelector(".cerrar-modal") : null;
+
+modalLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (!modal) return;
+    modal.classList.add("abierta");
+    modal.setAttribute("aria-hidden", "false");
+  });
+});
+
+if (btnCerrarModal) {
+  btnCerrarModal.addEventListener("click", () => {
+    modal.classList.remove("abierta");
+    modal.setAttribute("aria-hidden", "true");
+  });
+}
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("abierta");
+    modal.setAttribute("aria-hidden", "true");
+  }
+});
+
+// Separacion para el modal del formulario
+
+const modalExito = document.getElementById("modal-exito");
+const cerrarModalExito = document.getElementById("cerrar-modal-exito");
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  if (!validarNombre() || !validarEmail() || !validarMensaje()) {
+    alert("Por favor corrige los errores antes de enviar.");
+    return;
+  }
+
+  // Mostrar modal
+  modalExito.classList.add("abierta");
+  modalExito.setAttribute("aria-hidden", "false");
+
+  form.reset();
+});
+
+// Cerrar modal
+cerrarModalExito.addEventListener("click", () => {
+  modalExito.classList.remove("abierta");
+  modalExito.setAttribute("aria-hidden", "true");
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modalExito) {
+    modalExito.classList.remove("abierta");
+    modalExito.setAttribute("aria-hidden", "true");
+  }
+});
