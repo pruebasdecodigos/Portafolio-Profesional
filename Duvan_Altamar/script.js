@@ -3,7 +3,7 @@ const nav = document.getElementById('nav');
 const closeBtn = document.getElementById('close-btn');
 const navLinks = document.querySelectorAll('#nav ul li a');
 
-// Abrir menú (accesible)
+// script para abrir el menú
 menuToggle.addEventListener('click', () => {
   nav.classList.add('open');
   menuToggle.setAttribute('aria-expanded', 'true');
@@ -11,14 +11,14 @@ menuToggle.addEventListener('click', () => {
   if (firstLink) firstLink.focus();
 });
 
-// Cerrar menú con botón
+// scrip para cerra el menú con el botón
 closeBtn.addEventListener('click', () => {
   nav.classList.remove('open');
   menuToggle.setAttribute('aria-expanded', 'false');
   menuToggle.focus();
 });
 
-// Cerrar menú al navegar entre links
+// esto cierra el menú al hacer el click en cualquiera de los links
 navLinks.forEach(link =>
   link.addEventListener('click', () => {
     nav.classList.remove('open');
@@ -35,7 +35,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Scroll suave
+// animacion de scroll
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
     const hash = link.getAttribute('href');
@@ -47,7 +47,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-// ===== Barras de progreso (reinician al salir/entrar) =====
+// animacion para las barras de progreso (se reinician al salir/entrar del viewport)
 const barras = document.querySelectorAll(".progreso");
 
 function enViewport(el) {
@@ -76,7 +76,7 @@ window.addEventListener("scroll", animarBarrasSiCorresponde);
 window.addEventListener("resize", animarBarrasSiCorresponde);
 window.addEventListener("DOMContentLoaded", animarBarrasSiCorresponde);
 
-// ===== Validación formulario (mensajes debajo) =====
+// Validación del formulario (esto es para los mensajes de adebajo)
 const form = document.querySelector(".formulario-contacto");
 const nombre = document.getElementById("nombre");
 const email = document.getElementById("email");
@@ -133,33 +133,5 @@ form.addEventListener("submit", (e) => {
     if (errorNombre.textContent) nombre.focus();
     else if (errorEmail.textContent) email.focus();
     else if (errorMensaje.textContent) mensaje.focus();
-  }
-});
-
-// ===== Modal Proyecto (más dinámico) =====
-const modalLinks = document.querySelectorAll("[data-modal]");
-const modal = document.getElementById("modal-proyecto");
-const btnCerrarModal = modal ? modal.querySelector(".cerrar-modal") : null;
-
-modalLinks.forEach(link => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (!modal) return;
-    modal.classList.add("abierta");
-    modal.setAttribute("aria-hidden", "false");
-  });
-});
-
-if (btnCerrarModal) {
-  btnCerrarModal.addEventListener("click", () => {
-    modal.classList.remove("abierta");
-    modal.setAttribute("aria-hidden", "true");
-  });
-}
-
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.remove("abierta");
-    modal.setAttribute("aria-hidden", "true");
   }
 });
