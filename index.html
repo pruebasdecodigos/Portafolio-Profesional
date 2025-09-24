@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="Duván Altamar, portafolio, desarrollador web, frontend, proyectos, HTML, CSS, JavaScript">
+  <meta name="author" content="Duván Altamar">
+  <title>Portafolio Profesional</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">
+  <img src="./assets/img/foto_logoheader.png" alt="Foto de personal de Duvan Altamar" class="logo-foto">
+  <span>Mi Portafolio personal</span>
+</div>
+  <div class="menu-toggle" id="menu-toggle" aria-controls="nav" aria-expanded="false"> ☰ </div>
+  <nav id="nav">
+    <div class="close-btn" id="close-btn" aria-label="Cerrar menú">✖</div>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#acerca">Acerca de</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="inicio">
+    <h1>¡Hola curioso👋!, <strong>Soy Duvan</strong> que mas?</h1>
+    <a href="#acerca" class="btn-descubrir">Descubrir</a>
+  </section>
+
+  <section id="acerca">
+    <h2>Acerca de mí</h2>
+    <div class="contenedor-acerca">
+      <div class="card-foto">
+        <img src="./assets/img/IMG_20241225_165817_791.jpg" alt="Foto de perfil de Duvan, el dueño del portafolio" />
+      </div>
+      <div class="texto-acerca">
+        <p>
+          Aja bro?, te cuento soy una persona apasionada por la tecnología y el aprendizaje constante. 
+          Me gusta enfrentar retos que me permitan crecer tanto en lo personal como en lo profesional. 
+          Mi enfoque está en el desarrollo web y el diseño de páginas web. 
+          Creo firmemente que cada proyecto es una oportunidad para dejar huella y aportar valor. 
+          Además disfruto trabajar en equipo y aprender de otros, porque sé que el crecimiento se logra colaborando.
+        </p>
+      </div>
+    </div>
+  </section>
+
+ <section id="habilidades">
+  <h2>Habilidades</h2>
+  <div class="contenedor-habilidades">
+
+    <div class="card-habilidad">
+      <h3>HTML</h3>
+      <div class="barra">
+        <div class="progreso"><span data-ancho="95">95%</span></div>
+      </div>
+    </div>
+
+    <div class="card-habilidad">
+      <h3>CSS</h3>
+      <div class="barra">
+        <div class="progreso"><span data-ancho="93">93%</span></div>
+      </div>
+    </div>
+
+    <div class="card-habilidad">
+      <h3>JavaScript</h3>
+      <div class="barra">
+        <div class="progreso"><span data-ancho="76">76%</span></div>
+      </div>
+    </div>
+
+    <div class="card-habilidad">
+      <h3>Responsive Design</h3>
+      <div class="barra">
+        <div class="progreso"><span data-ancho="79">79%</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="contenedor-proyectos">
+
+      <div class="card-proyecto proyecto-1">
+        <div class="header-card"><h3>Proyecto 1</h3></div>
+        <div class="contenido-card">
+          <h4>Portafolio profesional 2.0</h4>
+          <p>Versión mejorada del portafolio que estas viendo, con diseño actualizado y funcionalidades avanzadas. <br> <strong>Proyecto en construcción.</strong></br></p>
+          <a href="https://github.com/pruebasdecodigos/Portafolio-Profesional---Version-2.0.git">Ver proyecto →</a>
+        </div>
+      </div>
+
+      <div class="card-proyecto proyecto-2">
+        <div class="header-card"><h3>Proyecto 2</h3></div>
+        <div class="contenido-card">
+          <h4>IA generadora de musica</h4>
+          <p>Este es un proyecto experimental que mezcla inteligencia artificial con creatividad sonora, capaz de generar ritmos únicos en segundos. 🎵🤖</p>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Ver proyecto →</a>
+        </div>
+      </div>
+
+      <div class="card-proyecto proyecto-3">
+        <div class="header-card">
+          <img src="./assets/img/Candado digital.png" alt="Candado digital (proyecto confidencial)" class="captura-proyecto">
+          <h3>Confidencial 🔒</h3>
+        </div>
+        <div class="contenido-card">
+          <h4>Proyecto secreto</h4>
+          <p>Proyecto ultrasecreto que no puedo revelar… todavía 👀…. Solo te diré que cambiará el mundo….</p>
+          <a href="#" class="link-restringido" data-modal="modal-proyecto">🔐 Acceso restringido</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="modal-proyecto" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-hidden="true">
+    <div class="modal-content">
+      <button class="cerrar-modal" aria-label="Cerrar">✖</button>
+      <h2 id="modal-titulo">Vista previa proyecto secreto</h2>
+      <p>Este proyecto aún está en fase confidencial, pero pronto estará disponible para el público 🚀</p>
+    </div>
+  </div>
+
+  <section id="contacto">
+    <h2>Contáctame</h2>
+    <div class="contenedor-contacto">
+      <div class="info-contacto">
+        <div class="card-contacto"><h3>Email</h3><p>pruebasparatd@ejemplo.com</p></div>
+        <div class="card-contacto"><h3>Teléfono</h3><p>+57 323 951 1242</p></div>
+        <div class="card-contacto"><h3>Ubicación</h3><p>Barranquilla, Colombia</p></div>
+      </div>
+      <form class="formulario-contacto" action="#" method="POST" novalidate>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required minlength="3">
+        <span class="error" id="error-nombre" aria-live="polite"></span>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error" id="error-email" aria-live="polite"></span>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        <span class="error" id="error-mensaje" aria-live="polite"></span>
+
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-center">
+      <div class="social-links">
+        <a href="https://www.instagram.com/duvan.ads/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/duvan.altamar.77/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://x.com/__Duvan" target="_blank" rel="noopener noreferrer">Twitter</a>
+      </div>
+      <p>© 2025 Portafolio Personal. Todos los derechos reservados.</p>
+    </div>
+    <div class="footer-right">
+      <a href="https://tocaunavida.org/" target="_blank" rel="noopener noreferrer"><img src="./assets/img/Logo_fRofe.png" alt="Logo de la Fundación Rofe, empresa aliada de Jovenes creativos" class="logo-redondeado"></a>
+      <a href="https://site2.q10.com/" target="_blank" rel="noopener noreferrer"><img src="./assets/img/Logo_Q10.png" alt="Logo perteneciente a Q10, plataforma donde se motan los modulos de Jovenes Creativos" ></a>
+      <a href="https://jovenes.tocaunavida.org/" target="_blank" rel="noopener noreferrer"><img src="./assets/img/Logo-JC.png" alt="Logo de Jóvenes Toca Una Vida o Jovenes Creativos"></a>
+    </div>
+  </div>
+</footer>
+
+<div id="modal-exito" class="modal-exito" aria-hidden="true">
+  <div class="modal-exito-content">
+    <button id="cerrar-modal-exito" class="cerrar-modal-exito">&times;</button>
+    <h2>✅ Mensaje enviado</h2>
+    <p>Gracias por contactarme, te responderé pronto.</p>
+  </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
+
